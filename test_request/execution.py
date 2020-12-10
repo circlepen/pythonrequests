@@ -14,28 +14,32 @@ from functions import (
 """
 ========== base information ========== 
 """
-ip = '172.29.89.74:32118'
-username = 'user1'
-pwd = '1qaz2wsx'
+ip = '10.1.3.20:8080'
+username = 'medicalai'
+pwd = 'tangodown'
 key = get_token(username, pwd, ip)
 token = f'Token {key}'
-
+#"key":"706c3a2fccae00f84d1a272fc1cfef4b47c5c4f5"
 # uncomment the code you need below to use it
 
 """
 ========== create a new task ==========
 """
-# labels = [{      
-#             "name": "person",
-#             "id": 12,
-#             "color": "#c06060",
-#             "attributes": []
-#             }]
-# name = "testAPI"
-# t_id = create_task(ip, token, name, labels)
-# resource_type = 'local'
-# resources = ['/Users/yijulai/Downloads/shiro.png',]
-# attatch_data(t_id, ip, resource_type, resources)
+labels = [{      
+            "name": "person",
+            "id": 12,
+            "color": "#c06060",
+            "attributes": []
+            }]
+name = "testAPI"
+t_id = create_task(ip, token, name, labels)
+resource_type = 'local'
+resources = [
+    '/home/share/hank_2020/cvat-images/dcm/mdb260rl_rot.png',
+    '/home/share/hank_2020/cvat-images/dcm/mdb259ll_rot.png',
+    '/home/share/hank_2020/cvat-images/dcm/mdb261ls_rot.png',
+    ]
+attatch_data(t_id, ip, resource_type, resources)
 
 
 """
@@ -68,8 +72,8 @@ token = f'Token {key}'
 """
 ========== auto annotation ==========
 """
-# profit_url = "http://10.43.119.194:5000"
-# model_name = "frcnn_inceptionresnetv2_coco"
+# profit_url = "10.1.3.21:35000"
+# model_name = "breast"
 # task_id = 1
 
 # auto_annotation(task_id, ip, token, profit_url, model_name)
