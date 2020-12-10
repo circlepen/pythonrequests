@@ -25,28 +25,28 @@ token = f'Token {key}'
 """
 ========== create a new task ==========
 """
-labels = [{      
-            "name": "person",
-            "id": 12,
-            "color": "#c06060",
-            "attributes": []
-            }]
-name = "testAPI"
-t_id = create_task(ip, token, name, labels)
-resource_type = 'local'
-resources = [
-    '/home/share/hank_2020/cvat-images/dcm/mdb260rl_rot.png',
-    '/home/share/hank_2020/cvat-images/dcm/mdb259ll_rot.png',
-    '/home/share/hank_2020/cvat-images/dcm/mdb261ls_rot.png',
-    ]
-attatch_data(t_id, ip, resource_type, resources, token)
+# labels = [{      
+#             "name": "person",
+#             "id": 12,
+#             "color": "#c06060",
+#             "attributes": []
+#             }]
+# name = "testAPI"
+# t_id = create_task(ip, token, name, labels)
+# resource_type = 'local'
+# resources = [
+#     '/home/share/hank_2020/cvat-images/dcm/mdb260rl_rot.png',
+#     '/home/share/hank_2020/cvat-images/dcm/mdb259ll_rot.png',
+#     '/home/share/hank_2020/cvat-images/dcm/mdb261ls_rot.png',
+#     ]
+# attatch_data(t_id, ip, resource_type, resources, token)
 
 
 """
 ========== delete a task ==========
 """
-# task_id = 1
-# r = task_delete(task_id, ip, token)
+task_id = 4
+r = task_delete(task_id, ip, token)
 
 
 
