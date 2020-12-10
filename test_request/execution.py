@@ -39,7 +39,7 @@ resources = [
     '/home/share/hank_2020/cvat-images/dcm/mdb259ll_rot.png',
     '/home/share/hank_2020/cvat-images/dcm/mdb261ls_rot.png',
     ]
-attatch_data(t_id, ip, resource_type, resources)
+attatch_data(t_id, ip, resource_type, resources, token)
 
 
 """
